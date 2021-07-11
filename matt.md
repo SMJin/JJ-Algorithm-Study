@@ -6,7 +6,7 @@
 
 | 문제 번호 | 문제 제목 | 정답 코드 |
 | :--: | :--: | :--: |
-| 10808 | [알파벳 개수](https://www.acmicpc.net/problem/10808) | - |
+| 10808 | [알파벳 개수](https://www.acmicpc.net/problem/10808) | [C++](./array/10808.cpp) |
 | 10807 | [개수 세기](https://www.acmicpc.net/problem/10807) | - |
 | 2577 | [숫자의 개수](https://www.acmicpc.net/problem/2577) | - |
 | 11328 | [Strfry](https://www.acmicpc.net/problem/11328) | - |
