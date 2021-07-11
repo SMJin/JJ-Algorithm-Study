@@ -2,34 +2,20 @@
 
 using namespace std;
 
-int _10807();
-
-int main() {
-	cout << _10807();
-	return 0;
-}
-
-int _10807() {
+int main(void) {
 	const int N = 100;
-	int result = 0;
-
-	int size = 0;
+	int size, n, v;
 	cin >> size;
 
 	int arr[N] = { 0, };
 
-	for (int i = 0;i < size; i++) {
-		cin >> arr[i];
+	while (size--) {
+		cin >> n;
+		arr[n] ++;
 	}
 
-	int v = 0;
 	cin >> v;
-	
-	for (int i=0; i<size; i++) {
-		if (arr[i] == v) {
-			result++;
-		}
-	}
+	cout << arr[v];
 
-	return result;
+	return 0;
 }
