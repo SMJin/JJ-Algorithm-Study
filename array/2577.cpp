@@ -3,27 +3,15 @@
 using namespace std;
 
 int main() {
-	int n = 3;
 	int arr[10] = { 0, };
-	int result = 1;
 
-	while (n--) {
-		int temp = 0;
-		cin >> temp;
-		result *= temp;
-	}
+	int a, b, c;
+	cin >> a >> b >> c;
+	int result = a * b * c;
 
-	int max = 100000000;
-	bool start = false;
-	for (int i = 0; i < 9; i++) {
-		if (!start && result / max != 0) {
-			start = true;
-		}
-		if (start) {
-			arr[result / max]++;
-		}
-		result %= max;
-		max /= 10;
+	while (result) {
+		arr[result % 10]++;
+		result /= 10;
 	}
 
 	for (int i : arr) {
