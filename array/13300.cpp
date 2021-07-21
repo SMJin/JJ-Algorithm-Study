@@ -12,19 +12,15 @@ int main() {
 		int sex, grade;
 		cin >> sex >> grade;
 
-		if (arr[sex][grade - 1]) {
-			if (arr[sex][grade - 1] == size) {
-				arr[sex][grade - 1] = 1;
-				result++;
-			}
-			else {
-				arr[sex][grade - 1] ++;
-			}
-		}
-		else {
+		if (arr[sex][grade - 1] == size) {
+			arr[sex][grade - 1] = 0;
 			result++;
-			arr[sex][grade - 1]++;
 		}
+		else if (!arr[sex][grade - 1]) {
+			result++;
+		}
+
+		arr[sex][grade - 1] ++;
 	}
 
 	cout << result;
