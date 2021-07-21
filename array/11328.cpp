@@ -30,12 +30,7 @@ int main() {
 			}
 		}
 
-		if (isPossible) {
-			cout << "Possible" << endl;
-		}
-		else {
-			cout << "Impossible" << endl;
-		}
+		cout << (isPossible ? "Possible" : "Impossible") << endl;
 	}
 
 	return 0;
