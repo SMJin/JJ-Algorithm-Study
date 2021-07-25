@@ -8,3 +8,4 @@ week_00
    
 week_01
 3. 컨베이어_벨트_위의_로봇_20055 - https://www.acmicpc.net/problem/20055
+4. 마법사_상어와_비바라기_21610 - https://www.acmicpc.net/problem/21610
