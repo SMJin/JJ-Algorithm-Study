@@ -12,3 +12,4 @@ week_01
 
 week_02
 5. 청소년_상어_19236 - https://www.acmicpc.net/problem/19236
+6. 마법사_상어와_토네이도_20057 - https://www.acmicpc.net/problem/20057
