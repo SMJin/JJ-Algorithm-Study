@@ -19,4 +19,5 @@ week_02
 
 week_03
 7. 주사위_굴리기_14499 - https://www.acmicpc.net/problem/14499
-8. 퇴사 - https://www.acmicpc.net/problem/14501
+8. 퇴사_14501 - https://www.acmicpc.net/problem/14501
+9. 퇴사_2_15486 - https://www.acmicpc.net/problem/15486
