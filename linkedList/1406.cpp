@@ -2,115 +2,164 @@
 
 using namespace std;
 
+class Node {
+private:
+	char ch;
+	Node* before;
+	Node* next;
+
+public:
+	Node(char ch, Node *before, Node *next) {
+		this->ch = ch;
+		this->before = before;
+		this->next = next;
+	}
+
+	void setValue(char ch);
+	char getValue();
+	void setBefore(Node* node);
+	Node* getBefore();
+	void setNext(Node* node);
+	Node* getNext();
+};
+
+void Node::setValue(char ch) {
+	this->ch = ch;
+}
+
+char Node::getValue() {
+	return this->ch;
+}
+
+void Node::setBefore(Node* node) {
+	this->before = node;
+}
+
+Node* Node::getBefore() {
+	return this->before;
+}
+
+void Node::setNext(Node* node) {
+	this->next = node;
+}
+
+Node* Node::getNext() {
+	return this->next;
+}
+
 int main() {
 	string str; 
 	int m;
 	cin >> str >> m;
-	//cout << "str : " << str << endl;
+	cout << "str : " << str << endl;
 
-	char *arr = new char[100000];
-	int str_length = str.length();
-	int size = str.length();
-	for (int i = 0; i < str.length(); i++) {
-		*arr = str[i];
-		arr++;
+	Node* beforeNode = new Node(NULL, NULL, NULL);
+	Node* currentNode = NULL;
+
+	int i;
+	for (i = 0; i < str.length(); i++) {
+		currentNode = new Node(str[i], beforeNode, NULL);
+		currentNode->getBefore()->setNext(currentNode);
+		beforeNode = currentNode;
 	}
-	arr--;
 
 	while (m--) {
-		char ch;
-		cin >> ch;
+		char cmd;
+		cin >> cmd;
 
-		switch (ch)
+		switch (cmd)
 		{
 		case 'L':
-			if (size > 0) {
-				arr--;
-				size--;
+			if (currentNode->getBefore()) {
+				currentNode = currentNode->getBefore();
 			}
-			//cout << "*arr : " << *arr << endl;
-			//cout << "size : " << size << endl;
-			//cout << "str_length : " << str_length << endl;
-			break;	
+
+			/* 출력부분 */
+			if (currentNode->getValue()) {
+				cout << currentNode->getValue() << endl;
+			}
+			else {
+				cout << "NULL" << endl;
+			}
+			cout << endl;
+			/* 출력부분 */
+
+			break;
 		case 'D':
-			if (size < str_length) {
-				arr++;
-				size++;
+			if (currentNode->getNext()) {
+				currentNode = currentNode->getNext();
 			}
-			//cout << "*arr : " << *arr << endl;
-			//cout << "size : " << size << endl;
-			//cout << "str_length : " << str_length << endl;
+
+			/* 출력부분 */
+			if (currentNode->getValue()) {
+				cout << currentNode->getValue() << endl;
+			}
+			else {
+				cout << "NULL" << endl;
+			}
+			cout << endl;
+			/* 출력부분 */
+
 			break;
 		case 'B':
-			if (size) {
-				if (str_length == size) {
-					arr--;
-					size--;
+			if (currentNode->getValue()) {
+				Node* nodeBefore = currentNode->getBefore();
+				Node* nodeNext = currentNode->getNext();
+				if (nodeNext) {
+					nodeBefore->setNext(nodeNext);
+					nodeNext->setBefore(nodeBefore);
 				}
 				else {
-					char next_char;
-					int current_cursor = size;
-					for (int i = current_cursor; i < str_length; i++) {
-						arr++;
-						next_char = *arr;
-						arr--;
-
-						*arr = next_char;
-						size++;
-						arr++;
-					}
-					for (int i = current_cursor; i <= str_length; i++) {
-						arr--;
-						size--;
-					}
+					nodeBefore->setNext(NULL);
 				}
-				str_length--;
+				currentNode = nodeBefore;
 			}
-			
-			//cout << "*arr : " << *arr << endl;
-			//cout << "size : " << size << endl;
-			//cout << "str_length : " << str_length << endl;
+
+			/* 출력부분 */
+			if (currentNode->getValue()) {
+				cout << currentNode->getValue() << endl;
+			}
+			else {
+				cout << "NULL" << endl;
+			}
+			cout << endl;
+			/* 출력부분 */
+
 			break;
 		case 'P':
-			char add_char, cur_char;
-			cin >> add_char;
+			char ch;
+			cin >> ch;
 
-			arr++;
-			size++;
-			int current_cursor = size;
-			for (int i = current_cursor; i <= str_length; i++) {
-				cur_char = *arr;
-				*arr = add_char;
-				add_char = cur_char;
-				arr++;
-				size++;
+			Node* nodeBefore = currentNode->getBefore();
+			Node* nodeNext = currentNode->getNext();
+			Node* newNode = new Node(ch, currentNode, nodeNext);
+			currentNode->setNext(newNode);
+			if (nodeNext) {
+				nodeNext->setBefore(newNode);
 			}
-			*arr = add_char;
+			currentNode = newNode;
 
-			for (int i = current_cursor; i <= str_length; i++) {
-				arr--;
-				size--;
+			/* 출력부분 */
+			if (currentNode->getValue()) {
+				cout << currentNode->getValue() << endl;
 			}
-			str_length++;
+			else {
+				cout << "NULL" << endl;
+			}
+			cout << endl;
+			/* 출력부분 */
 
-			//cout << "*arr : " << *arr << endl;
-			//cout << "size : " << size << endl;
-			//cout << "str_length : " << str_length << endl;
 			break;
 		}
 	}
 
-	while (size) {
-		size--;
-		arr--;
+	while (currentNode->getBefore()) {
+		currentNode = currentNode->getBefore();
 	}
-	size++;
-	arr++;
 
-	for (int i = 0; i < str_length; i++) {
-		cout << *arr;
-		arr++;
-		size++;
+	while (currentNode->getNext()) {
+		cout << currentNode->getNext()->getValue();
+		currentNode = currentNode->getNext();
 	}
 
 	return 0;
