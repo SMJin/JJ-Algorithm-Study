@@ -51,9 +51,9 @@ int main() {
 	string str; 
 	int m;
 	cin >> str >> m;
-	cout << "str : " << str << endl;
 
 	Node* beforeNode = new Node(NULL, NULL, NULL);
+	Node* head = beforeNode;
 	Node* currentNode = NULL;
 
 	int i;
@@ -73,33 +73,11 @@ int main() {
 			if (currentNode->getBefore()) {
 				currentNode = currentNode->getBefore();
 			}
-
-			/* 출력부분 */
-			if (currentNode->getValue()) {
-				cout << currentNode->getValue() << endl;
-			}
-			else {
-				cout << "NULL" << endl;
-			}
-			cout << endl;
-			/* 출력부분 */
-
 			break;
 		case 'D':
 			if (currentNode->getNext()) {
 				currentNode = currentNode->getNext();
 			}
-
-			/* 출력부분 */
-			if (currentNode->getValue()) {
-				cout << currentNode->getValue() << endl;
-			}
-			else {
-				cout << "NULL" << endl;
-			}
-			cout << endl;
-			/* 출력부분 */
-
 			break;
 		case 'B':
 			if (currentNode->getValue()) {
@@ -114,17 +92,6 @@ int main() {
 				}
 				currentNode = nodeBefore;
 			}
-
-			/* 출력부분 */
-			if (currentNode->getValue()) {
-				cout << currentNode->getValue() << endl;
-			}
-			else {
-				cout << "NULL" << endl;
-			}
-			cout << endl;
-			/* 출력부분 */
-
 			break;
 		case 'P':
 			char ch;
@@ -138,25 +105,11 @@ int main() {
 				nodeNext->setBefore(newNode);
 			}
 			currentNode = newNode;
-
-			/* 출력부분 */
-			if (currentNode->getValue()) {
-				cout << currentNode->getValue() << endl;
-			}
-			else {
-				cout << "NULL" << endl;
-			}
-			cout << endl;
-			/* 출력부분 */
-
 			break;
 		}
 	}
 
-	while (currentNode->getBefore()) {
-		currentNode = currentNode->getBefore();
-	}
-
+	currentNode = head;
 	while (currentNode->getNext()) {
 		cout << currentNode->getNext()->getValue();
 		currentNode = currentNode->getNext();
