@@ -18,6 +18,15 @@ week_02
 6. 마법사_상어와_토네이도_20057 - https://www.acmicpc.net/problem/20057
 
 week_03
+
 7. 주사위_굴리기_14499 - https://www.acmicpc.net/problem/14499
 8. 퇴사_14501 - https://www.acmicpc.net/problem/14501
 9. 퇴사_2_15486 - https://www.acmicpc.net/problem/15486
+
+week_04
+
+10. 알약_4811 - https://www.acmicpc.net/problem/4811
+
+week_05
+
+11. 스택_수열 - https://www.acmicpc.net/problem/1874
