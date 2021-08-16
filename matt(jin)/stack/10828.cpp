@@ -5,11 +5,11 @@ using namespace std;
 class Stack {
 private:
 	int size;
-	int arr[10001];
+	int* arr;
 public:
 	Stack() {
 		this->size = 0;
-		this->arr[10001] = { -1, };
+		this->arr = new int[10001];
 	}
 
 	void push(int num);
