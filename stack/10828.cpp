@@ -5,11 +5,11 @@ using namespace std;
 class Stack {
 private:
 	int size;
-	int* arr;
+	int arr[10001];
 public:
 	Stack() {
 		this->size = 0;
-		this->arr = new int;
+		this->arr[10001] = { -1, };
 	}
 
 	void push(int num);
@@ -51,19 +51,12 @@ int main() {
 }
 
 void Stack::push(int num) {
-	if (this->size) {
-		this->arr++;
-	}
-	*(this->arr) = num;
-	this->size++;
+	arr[size++] = num;
 }
 
 int Stack::pop() {
-	if (this->size) {
-		int cur = *(this->arr);
-		this->arr--;
-		this->size--;
-		return cur;
+	if (!this->isEmpty()) {
+		return arr[--size];
 	}
 	return -1;
 }
@@ -80,5 +73,5 @@ int Stack::peak() {
 	if (this->isEmpty()) {
 		return -1;
 	}
-	return *(this->arr);
+	return arr[size-1];
 }
