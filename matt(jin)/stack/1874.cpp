@@ -2,29 +2,34 @@
 #include <stack>
 
 using namespace std;
-
+	
 int main() {
 	int k;
 	cin >> k;
 
 	stack<int> stack;
 	string result = "";
+	int* input_numbers = new int[k];
 	bool isNo = false;
 	int current = 1;
 
-	while(k--) {
+	for (int i = 0; i < k; i++) {
 		int n;
 		cin >> n;
+		input_numbers[i] = n;
+	}
 
-		while (current <= n) {
+	for (int i = 0; i < k; i++) {
+
+		while (current <= input_numbers[i]) {
 			stack.push(current);
-			result += "+";
+			result += "+\n";
 			current++;
 		}
 
-		if (stack.top() == n) {
+		if (stack.top() == input_numbers[i]) {
 			stack.pop();
-			result += "-";
+			result += "-\n";
 		}
 		else {
 			isNo = true;
@@ -37,9 +42,7 @@ int main() {
 		cout << "NO";
 	}
 	else {
-		for (char ch : result) {
-			cout << ch << endl;
-		}
+		cout << result;
 	}
 
 	return 0;
