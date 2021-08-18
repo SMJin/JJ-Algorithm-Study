@@ -34,5 +34,5 @@
 | 10828 |      [스택](https://www.acmicpc.net/problem/10828)       | [C++](./stack/10828.cpp) |
 | 10773 |      [제로](https://www.acmicpc.net/problem/10773)       |  [-](./stack/10733.cpp)  |
 | 1874  |    [스택 수열](https://www.acmicpc.net/problem/1874)     | [C++](./stack/1874.cpp)  |
-| 2493  |        [탑](https://www.acmicpc.net/problem/2493)        |  [-](./stack/2493.cpp)   |
+| 2493  |        [탑](https://www.acmicpc.net/problem/2493)        |  [C++](./stack/2493.cpp)   |
 | 6198  | [옥상 정원 꾸미기](https://www.acmicpc.net/problem/6198) |  [-](./stack/6198.cpp)   |
