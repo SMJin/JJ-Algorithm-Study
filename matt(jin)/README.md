@@ -36,3 +36,13 @@
 | 1874  |    [스택 수열](https://www.acmicpc.net/problem/1874)     | [C++](./stack/1874.cpp)  |
 | 2493  |        [탑](https://www.acmicpc.net/problem/2493)        |  [C++](./stack/2493.cpp)   |
 | 6198  | [옥상 정원 꾸미기](https://www.acmicpc.net/problem/6198) |  [-](./stack/6198.cpp)   |
+
+# 큐
+
+[백준 큐 문제 모음 링크](https://www.acmicpc.net/workbook/view/7310)
+
+| 문제 | 문제 제목 | 정답 코드 |
+| :--: | :--: | :--: |
+| 10845 | [큐](https://www.acmicpc.net/problem/10845) | [-](./queue/10845.cpp) |
+| 18258 | [큐 2](https://www.acmicpc.net/problem/18258) | [-](./queue/18258.cpp) |
+| 2164 | [카드2](https://www.acmicpc.net/problem/2164) | [-](./queue/2164.cpp) |
