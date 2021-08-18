@@ -1,25 +1,29 @@
 from collections import deque
+import sys
+
+
+r = sys.stdin.readline
 
 
 def main():
-    N = int(input())
-    arr = [int(input()) for _ in range(N)]
+    N = int(r())
+    arr = [int(r()) for _ in range(N)]
     idx = 0
     stack = deque([])
-    cmd = []
+    cmd = ''
     for i in range(1, N+1):
         stack.append(i)
-        cmd.append('+')
+        cmd += '+\n'
 
         while stack and stack[-1] == arr[idx]:
             stack.pop()
-            cmd.append('-')
+            cmd += '-\n'
             idx += 1
 
-    if len(cmd) == 2 * N:
-        print('\n'.join(cmd))
+    if stack:
+        print('NO')
     else:
-        print("NO")
+        print(cmd)
 
 
 if __name__ == "__main__":
