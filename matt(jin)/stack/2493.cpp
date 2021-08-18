@@ -7,55 +7,43 @@ int main() {
 	int n;
 	cin >> n;
 
-	stack<int> tower;
-	stack<int> tmp;
+	int* tower = new int[n];
 	stack<int> result;
 	for (int i = 0; i < n; i++) {
 		int t;
 		cin >> t;
-		tower.push(t);
+		tower[i] = t;
 	}
-	
-	for (int i = n; i > 0; i--) {
-		int current = tower.top();
-		tower.pop();
+
+	int i;
+	for (i = n-1; i > 0; i--) {
+		int current = tower[i];
 		int compare = 0;
-		if (!tower.empty()) {
-			compare = tower.top();
-		}
 
-		int howMany = 1;
-		while (compare && current > compare) {
-			tmp.push(compare);
-			tower.pop();
-			if (!tower.empty()) {
-				compare = tower.top();
-				howMany++;
-			}
-			else {
-				compare = NULL;
-				howMany = 0;
+		bool hit = false;
+
+		int j;
+		for (j = i - 1; j >= 0; j--) {
+			compare = tower[j];
+			if (compare >= current) {
+				result.push(j + 1);
+				hit = true;
+				break;
 			}
 		}
 
-		if (compare) {
-			result.push(i - howMany);
-		}
-		else {
+		if (!hit) {
 			result.push(0);
 		}
 
-		while (!tmp.empty()) {
-			tower.push(tmp.top());
-			tmp.pop();
-		}
-
 	}
 
+	cout << "0";
 	while (!result.empty()) {
-		cout << result.top() << " ";
+		cout << " " << result.top();
 		result.pop();
 	}
+
 
 	return 0;
 }
