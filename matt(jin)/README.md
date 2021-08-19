@@ -45,4 +45,14 @@
 | :---: | :-------------------------------------------: | :----------------------: |
 | 10845 |  [큐](https://www.acmicpc.net/problem/10845)  | [C++](./queue/10845.cpp) |
 | 18258 | [큐 2](https://www.acmicpc.net/problem/18258) |  [-](./queue/18258.cpp)  |
-| 2164  | [카드2](https://www.acmicpc.net/problem/2164) |  [C++](./queue/2164.cpp)   |
+| 2164  | [카드2](https://www.acmicpc.net/problem/2164) | [C++](./queue/2164.cpp)  |
+
+# 덱
+
+[백준 덱 문제 모음 링크](https://www.acmicpc.net/workbook/view/7311)
+
+| 문제  |                      문제 제목                      |        정답 코드         |
+| :---: | :-------------------------------------------------: | :----------------------: |
+| 10866 |     [덱](https://www.acmicpc.net/problem/10866)     | [C++](./deque/10866.cpp) |
+| 1021  | [회전하는 큐](https://www.acmicpc.net/problem/1021) |  [-](./deque/1021.cpp)   |
+| 5430  |     [AC](https://www.acmicpc.net/problem/5430)      |  [-](./deque/5430.cpp)   |
