@@ -45,4 +45,4 @@
 | :---: | :-------------------------------------------: | :----------------------: |
 | 10845 |  [큐](https://www.acmicpc.net/problem/10845)  | [C++](./queue/10845.cpp) |
 | 18258 | [큐 2](https://www.acmicpc.net/problem/18258) |  [-](./queue/18258.cpp)  |
-| 2164  | [카드2](https://www.acmicpc.net/problem/2164) |  [-](./queue/2164.cpp)   |
+| 2164  | [카드2](https://www.acmicpc.net/problem/2164) |  [C++](./queue/2164.cpp)   |
