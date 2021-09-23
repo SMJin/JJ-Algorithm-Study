@@ -54,26 +54,26 @@ public class stack_2493 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Stack stack = new Stack();
-        StringBuilder sb = new StringBuilder();
         int n = scan.nextInt();
 
         stack.push(new Tower(1, scan.nextInt()));
-        sb.append("0 ");
+        System.out.print("0 ");
 
         for (int i=2; i<=n; i++) {
             int currentNum = scan.nextInt();
             Tower currentTower = new Tower(i, currentNum);
 
-            while(!stack.isEmpty() && (stack.top().getFloor() < currentNum)) {
+            while(!stack.isEmpty()) {
+                if (currentNum < stack.top().getFloor()) {
+                    System.out.print(stack.top().getOrder() + " ");
+                    break;
+                }
                 stack.pop();
             }
 
-            if (stack.isEmpty()) sb.append("0 ");
-            else sb.append(stack.top().getOrder() + " ");
-
+            if (stack.isEmpty()) System.out.print("0 ");
             stack.push(currentTower);
 
         }
-        System.out.println(sb.toString());
     }
 }
