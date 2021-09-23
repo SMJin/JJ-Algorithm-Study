@@ -29,13 +29,13 @@
 
 [백준 스택 문제 모음 링크](https://www.acmicpc.net/workbook/view/7309)
 
-| 문제  |                        문제 제목                         |        정답 코드         |
-| :---: | :------------------------------------------------------: | :----------------------: |
-| 10828 |      [스택](https://www.acmicpc.net/problem/10828)       | [C++](./stack/10828.cpp) |
-| 10773 |      [제로](https://www.acmicpc.net/problem/10773)       |  [-](./stack/10733.cpp)  |
-| 1874  |    [스택 수열](https://www.acmicpc.net/problem/1874)     | [C++](./stack/1874.cpp)  |
-| 2493  |        [탑](https://www.acmicpc.net/problem/2493)        | [C++](./stack/2493.cpp)  |
-| 6198  | [옥상 정원 꾸미기](https://www.acmicpc.net/problem/6198) |  [-](./stack/6198.cpp)   |
+| 문제  |                        문제 제목                         |                           정답 코드                           |
+| :---: | :------------------------------------------------------: | :-----------------------------------------------------------: |
+| 10828 |      [스택](https://www.acmicpc.net/problem/10828)       |                   [C++](./stack/10828.cpp)                    |
+| 10773 |      [제로](https://www.acmicpc.net/problem/10773)       |                    [-](./stack/10733.cpp)                     |
+| 1874  |    [스택 수열](https://www.acmicpc.net/problem/1874)     |                    [C++](./stack/1874.cpp)                    |
+| 2493  |        [탑](https://www.acmicpc.net/problem/2493)        | [C++(런타임에러)](./stack/2493.cpp) [JAVA](./stack/2493.java) |
+| 6198  | [옥상 정원 꾸미기](https://www.acmicpc.net/problem/6198) |                     [-](./stack/6198.cpp)                     |
 
 # 큐
 
