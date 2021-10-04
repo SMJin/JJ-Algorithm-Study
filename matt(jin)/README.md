@@ -37,6 +37,18 @@
 | 2493  |        [탑](https://www.acmicpc.net/problem/2493)        | [C++(런타임에러)](./stack/2493.cpp) [JAVA(런타임에러)](./stack/2493.java) |
 | 6198  | [옥상 정원 꾸미기](https://www.acmicpc.net/problem/6198) |                           [-](./stack/6198.cpp)                           |
 
+# 스택의 활용(수식의 괄호 쌍)
+
+[백준 스택활용 문제 모음 링크](https://www.acmicpc.net/workbook/view/7312)
+
+| 문제 | 문제 제목 | 정답 코드 |
+| :--: | :--: | :--: |
+| 4949 | [균형잡힌 세상](https://www.acmicpc.net/problem/4949) | - |
+| 10799 | [쇠막대기](https://www.acmicpc.net/problem/10799) | - |
+| 2504 | [괄호의 값](https://www.acmicpc.net/problem/2504) | - |
+| 9012 | [괄호](https://www.acmicpc.net/problem/9012) | - |
+
+
 # 큐
 
 [백준 큐 문제 모음 링크](https://www.acmicpc.net/workbook/view/7310)
