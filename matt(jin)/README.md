@@ -1,5 +1,7 @@
 #### MATT's algorithm playground
 
+[삼성 SW A형 공부법 가이드](https://eine.tistory.com/entry/%EC%82%BC%EC%84%B1-SW-%EC%97%AD%EB%9F%89%ED%85%8C%EC%8A%A4%ED%8A%B8-%EB%B0%8F-A%ED%98%95-%EC%8B%9C%ED%97%98-%EC%A4%80%EB%B9%84%ED%95%98%EA%B8%B0)
+
 # 배열
 
 [백준 배열 문제 모음 링크](https://www.acmicpc.net/workbook/view/7307)
